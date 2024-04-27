@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+
+.course-table {
+  width: 80%;
+  margin: 0 auto; 
+  margin-bottom: 20px; 
+  border-collapse: collapse;
+}
+
+.course-table th,
+.course-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.course-table th {
+  background-color: #f2f2f2;
+}
+
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+h5, p {
+  text-align: center;
+}
+
+.add-all-btn {
+  text-align: center;
+}

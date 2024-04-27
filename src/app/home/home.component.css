@@ -1,0 +1,63 @@
+h2 {
+    text-align: start;
+    margin-top: 20px;
+}
+.hero {
+    position: relative;
+    height: 400px; 
+    margin: auto 50px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; 
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.hero-content h1 {
+    font-size: 2.5em; 
+    margin-bottom: 10px; 
+}
+
+.hero-content p {
+    font-size: 1.1em; 
+    line-height: 1.5; 
+}
+
+
+.recent-courses {
+    text-align: center;
+    margin: auto 50px;
+}
+
+.recent-courses h2 {
+    font-size: 1.8em; 
+    margin-bottom: 20px; 
+}
+
+.recent-courses-table {
+    width: 80%;
+    margin: 0 auto; 
+    border-collapse: collapse;
+}
+
+.recent-courses-table th,
+.recent-courses-table td {
+    border: 1px solid #ddd; 
+    padding: 8px;
+}
+
+.recent-courses-table th {
+    background-color: #f2f2f2;
+}
