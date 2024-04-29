@@ -1,28 +1,28 @@
 <div class="hero">
     <img src="assets/CF017224.IIQ.p.jpg" alt="Hero Image">
     <div class="hero-content">
-        <h1>Welcome to Our Project</h1>
-        <p>This is a brief description of our project. Feel free to explore!</p>
+        <h1>Välkommen till vårt universitet</h1>
+        <p>Du kan bläddra bland alla kurser och välja några. Vi önskar dig ett trevligt besök på vår hemsida!</p>
     </div>
 </div>
 
 <section class="recent-courses">
-    <h2>Recent Courses</h2>
+    <h2>Senaste kurser</h2>
     <table mat-table class="recent-courses-table" [dataSource]="recentCourses">
         <ng-container matColumnDef="courseCode">
-            <th mat-header-cell *matHeaderCellDef> Course Code </th>
+            <th mat-header-cell *matHeaderCellDef> Kod </th>
             <td mat-cell *matCellDef="let course"> {{ course.courseCode }} </td>
         </ng-container>
         <ng-container matColumnDef="courseName">
-            <th mat-header-cell *matHeaderCellDef> Course Name </th>
+            <th mat-header-cell *matHeaderCellDef> Kursnamn </th>
             <td mat-cell *matCellDef="let course"> {{ course.courseName }} </td>
         </ng-container>
         <ng-container matColumnDef="points">
-            <th mat-header-cell *matHeaderCellDef> Points </th>
+            <th mat-header-cell *matHeaderCellDef> Poäng </th>
             <td mat-cell *matCellDef="let course"> {{ course.points }} </td>
         </ng-container>
         <ng-container matColumnDef="subject">
-            <th mat-header-cell *matHeaderCellDef> Subject </th>
+            <th mat-header-cell *matHeaderCellDef> ämne </th>
             <td mat-cell *matCellDef="let course"> {{ course.subject }} </td>
         </ng-container>
         

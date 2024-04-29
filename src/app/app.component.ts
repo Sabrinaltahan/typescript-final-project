@@ -19,9 +19,9 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   navLinks = [
-    { label: 'Home', path: '' },
-    { label: 'Course Search', path: '/course-search' },
-    { label: 'Framework Schedule', path: '/framework-schedule' }
+    { label: 'Hem', path: '' },
+    { label: 'Kurser', path: '/course-search' },
+    { label: 'Mitt ramschema', path: '/framework-schedule' }
   ];
 
   isActive(path: string): boolean {

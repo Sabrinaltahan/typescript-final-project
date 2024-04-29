@@ -1,15 +1,15 @@
 
-<h2>Framework Schedule</h2>
+<h2>Mitt ramschema</h2>
 <div *ngIf="selectedCourses.length > 0">
     <table class="course-table">
         <thead>
             <tr>
-                <th>Course Code</th>
-                <th>Course Name</th>
-                <th>Points</th>
-                <th>Subject</th>
-                <th>Syllabus</th>
-                <th></th>
+                <th>Kod</th>
+                <th>Kursnamn</th>
+                <th>Poäng</th>
+                <th>ämne</th>
+                <th>Kursplan</th>
+                <th>Ta bort</th>
             </tr>
         </thead>
         <tbody>
@@ -18,19 +18,19 @@
                 <td>{{ course.courseName }}</td>
                 <td>{{ course.points }}</td>
                 <td>{{ course.subject }}</td>
-                <td><a href="{{ course.syllabus }}" target="_blank">Link</a></td>
-                <td><button [disabled]="course.addedToTimetable" (click)="removeFromTimetable(course)">Remove</button></td>
+                <td><a href="{{ course.syllabus }}" target="_blank">Kursplan</a></td>
+                <td><button [disabled]="course.addedToTimetable" (click)="removeFromTimetable(course)">Ta bort</button></td>
             </tr>
         </tbody>
     </table>
     
-    <h5>Number of results: {{ selectedCourses.length }}</h5>
-    <p>Total Higher Education Credits: {{ getTotalCredits() }}</p>
+    <h5>Antal kurser: {{ selectedCourses.length }} stycken</h5>
+    <p>Totalt antal poäng: {{ getTotalCredits() }}hp</p>
     <div class="add-all-btn">
-        <button mat-button (click)="removeAllFromTimetable()">Remove All from List</button>
+        <button mat-button (click)="removeAllFromTimetable()">Ta bort alla</button>
     </div>
 </div>
 
 <div *ngIf="selectedCourses.length === 0">
-    <p>No courses selected.</p>
+    <p>Inga kurser valda.</p>
 </div>

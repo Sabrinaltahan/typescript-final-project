@@ -1,13 +1,13 @@
 <form class="example-form">
     <mat-form-field appearance="fill">
-        <mat-label>Search by Course Code or Name</mat-label>
+        <mat-label>Filtrera kurser:</mat-label>
         <input matInput type="text" [(ngModel)]="searchQuery" name="searchQuery" (input)="filterCourses()">
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-        <mat-label>Select Subject</mat-label>
+        <mat-label>ämne:</mat-label>
         <mat-select [(value)]="selectedSubject" name="selectedSubject" (selectionChange)="filterCourses()">
-            <mat-option value="">All Subjects</mat-option>
+            <mat-option value="">Alla</mat-option>
             
             <mat-option *ngFor="let subject of subjects" [value]="subject">{{ subject }}</mat-option>
         </mat-select>
@@ -15,18 +15,18 @@
 </form>
 
 
-<h5>Lists {{ filteredCourses.length }} courses out of a total of {{ courses.length }}</h5>
+<h5>Listar {{ filteredCourses.length }} kurser av totalt {{ courses.length }}</h5>
 
 
 <table class="course-table">
     <thead>
         <tr>
-            <th (click)="sort('courseCode')">Course Code</th>
-            <th (click)="sort('courseName')">Course Name</th>
-            <th (click)="sort('points')">Points</th>
-            <th (click)="sort('subject')">Subject</th>
-            <th>Syllabus</th>
-            <th>Select</th>
+            <th (click)="sort('courseCode')">Kod</th>
+            <th (click)="sort('courseName')">Kursnamn</th>
+            <th (click)="sort('points')">Poäng</th>
+            <th (click)="sort('subject')">ämne</th>
+            <th>Kursplan</th>
+            <th>Lägg till</th>
         </tr>
     </thead>
     <tbody>
@@ -35,9 +35,9 @@
             <td>{{ course.courseName }}</td>
             <td>{{ course.points }}</td>
             <td>{{ course.subject }}</td>
-            <td><a [href]="course.syllabus" target="_blank">Link</a></td>
+            <td><a [href]="course.syllabus" target="_blank">Kursplan</a></td>
             <td>
-                <button (click)="addToTimetable(course)" [disabled]="courseAddedToTimetable(course)">Add to Timetable</button>
+                <button (click)="addToTimetable(course)" [disabled]="courseAddedToTimetable(course)">Lägg till</button>
             </td>
         </tr>
     </tbody>
@@ -46,12 +46,12 @@
 
 
 <div class="pagination-buttons">
-    <button mat-button (click)="prevPage()">Previous</button>
-    <span>Page {{ currentPage }} of {{ totalPages }}</span>
-    <button mat-button (click)="nextPage()">Next</button>
+    <button mat-button (click)="prevPage()">Tidigare</button>
+    <span>sida {{ currentPage }} av {{ totalPages }}</span>
+    <button mat-button (click)="nextPage()">Nästa</button>
 </div>
 
-<p>Number of Selected Courses: {{ selectedCourses.length }}</p>
+<p>Antal valda kurser: {{ selectedCourses.length }}</p>
 <div class="add-all-btn">
-    <button mat-button (click)="addAllToTimetable()">Add All to Timetable</button>
+    <button mat-button (click)="addAllToTimetable()">Lägg till alla</button>
 </div>
